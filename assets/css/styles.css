@@ -1,0 +1,272 @@
+:root {
+    --primary-color: #132A13;
+    --light-color: #ECF39E;
+    --light-green-color: #90a955;
+    --gap: 3rem
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 5.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+p {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+    line-height: 2.8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.main-bg {
+    background-image: url('/assets/img/main-bg.svg');
+    background-position: center;
+    background-size: cover;
+    color: var(--light-color);
+}
+
+.main-light {
+    background-color: #ffffff;
+}
+
+.main-content {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.menu-space {
+    height: 6.1rem;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--light-color);
+}
+
+.menu-content h1 a {
+    display: block;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    color: var(--primary-color)
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu-content ul {
+    display: flex;
+}
+
+.menu-content li a {
+    display: block;
+    padding: 2rem;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.menu ul li a {
+    position: relative;
+}
+
+.menu ul li a::after {
+	content: '';
+	position: absolute;
+	bottom: 1.2rem;
+	left: 50%;
+	width: 0;
+	height: 0.2rem;
+	background: var(--light-green-color);
+	transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+	width: 50%;
+	left: 25%;
+}
+
+
+.intro-content {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr;
+}
+
+
+.intro-text h2 {
+    text-transform: uppercase;
+}
+
+
+.top3-sec {
+    border-radius: 2rem;
+    background-color: #ECF39E;
+    max-width: 50%;
+    height: 100vh;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+#top3 {
+    background-image: url('/assets/img/main-bg.svg');
+}
+
+.top3-sec h2 {
+    text-transform: uppercase;
+}
+
+.jobs {
+    height: 100vh;
+}
+
+.jobs-title {
+    display: block;
+}
+
+.jobs-title h2, h4 {
+    margin-bottom: 2rem;
+}
+
+.jobs-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.jobs-content div {
+    padding-right: 2rem;
+}
+
+.jobs-content .one::before {
+    content: '1 ';
+}
+
+.jobs-content .two::before {
+    content: '2 ';
+}
+
+.jobs-content .three::before {
+    content: '3 ';
+}
+
+
+@media (max-width: 1300px) {
+    .jobs {
+        height: auto;
+    }
+
+    .jobs-content {
+        display: block;
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .top3-sec {
+        height: auto;
+    }
+}
+
+@media (max-width: 630px) {
+    body {
+        margin-top: -100vh;
+    }
+
+    .menu-space {
+        height: 1px;
+    }
+    
+    .menu {
+        position: sticky;
+        left: 100%;
+        height: 100vh;
+        max-width: 3.7rem;
+        text-align: center;
+    }
+
+    .menu h1 a {
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+        padding-top: 0.5rem;
+    }
+
+    .menu ul {
+        display: block;
+    }
+
+    .menu ul li a {
+        padding: 0;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .menu-content {
+        padding: 0;
+        padding-top: 6rem;
+        display: block;
+    }
+
+    .intro-img {
+        padding-left: 100%;
+    }
+    
+}
+
+
+
